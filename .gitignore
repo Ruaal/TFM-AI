@@ -170,6 +170,9 @@ poetry.toml
 # LSP config files
 pyrightconfig.json
 
+# NPC states files
+TFM-API/state/*.json
+
 ### Unity ###
 # This .gitignore file should be placed at the root of your Unity project directory
 #

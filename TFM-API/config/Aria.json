@@ -1,8 +1,14 @@
 {
-    "name": "Aria",
-    "tone": "kind",
-    "courtesy": "high",
-    "initial_mood": "neutral",
-    "history": "Aria is a wise healer from the forest, known for her endless compassion and ability to soothe all living beings. She always treats visitors with respect and kindness, even in difficult times."
-  }
-  
+  "name": "Aria",
+  "tone": "kind",
+  "courtesy": "high",
+  "initial_mood": "neutral",
+  "history": "Aria is a wise healer from the forest, known for her endless compassion and ability to soothe all living beings. She always treats visitors with respect and kindness, even in difficult times.",
+  "allowed_items": [
+    "herb",
+    "flower"
+  ],
+  "allowed_enemies": [
+    "goblin"
+  ]
+}

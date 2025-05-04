@@ -13,6 +13,31 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPCMessagePrefab Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 2612584127955434023, guid: c8a49c11833478a409b6785b6e723848,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2612584127955434023, guid: c8a49c11833478a409b6785b6e723848,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2612584127955434023, guid: c8a49c11833478a409b6785b6e723848,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2612584127955434023, guid: c8a49c11833478a409b6785b6e723848,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2612584127955434023, guid: c8a49c11833478a409b6785b6e723848,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3975126310250564972, guid: c8a49c11833478a409b6785b6e723848,
         type: 3}
       propertyPath: m_Color.b
