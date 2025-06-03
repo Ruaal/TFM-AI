@@ -21,17 +21,25 @@ public class FlaskLauncher : MonoBehaviour
 
     private void OnApplicationQuit()
     {
-        if (flaskProcess != null && !flaskProcess.HasExited)
-        {
-            flaskProcess.Kill();
-        }
+        KillFlask();
+    }
+
+    private void OnDestroy()
+    {
+        KillFlask();
     }
 
     private void StartFlask()
     {
+#if UNITY_EDITOR
         string scriptPath = Path.GetFullPath(
             Path.Combine(Application.dataPath, "..", "..", "TFM-API", "start_api.bat")
         );
+#else
+        string scriptPath = Path.GetFullPath(
+            Path.Combine(Application.dataPath, "..", "TFM-API", "start_api.bat")
+        );
+#endif
 
         flaskProcess = new Process();
         flaskProcess.StartInfo.FileName = scriptPath;
@@ -71,6 +79,17 @@ public class FlaskLauncher : MonoBehaviour
                 UnityEngine.Debug.LogError($"[NPC State Reset] {npcId} -> {request.error}");
             else
                 UnityEngine.Debug.Log($"[NPC State Reset] {npcId} state cleared.");
+        }
+    }
+
+    private void KillFlask()
+    {
+        if (flaskProcess != null && !flaskProcess.HasExited)
+        {
+            flaskProcess.Kill();
+            flaskProcess.Dispose();
+            flaskProcess = null;
+            UnityEngine.Debug.Log("[FlaskLauncher] Flask cerrado correctamente.");
         }
     }
 }
