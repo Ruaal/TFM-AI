@@ -7,6 +7,9 @@ from nodes.mission_assign import mission_assign
 from nodes.mission_complete import mission_complete
 from nodes.chitchat import chitchat_response
 from nodes.fallback import fallback_response
+from nodes.farewell import farewell_response
+from state.state import State
+from IPython.display import Image
 
 graph = StateGraph(dict)
 
@@ -18,12 +21,14 @@ graph.add_node("MissionAssign", mission_assign)
 graph.add_node("MissionComplete", mission_complete)
 graph.add_node("Chitchat", chitchat_response)
 graph.add_node("Fallback", fallback_response)
+graph.add_node("Farewell", farewell_response)
 
 graph.set_entry_point("DetectIntent")
 graph.add_edge("DetectIntent", "UpdateMood")
 
-def router(state):
-    intent = state['intent']
+
+def router(state: State):
+    intent = state.intent
     match intent:
         case "GREETING":
             return "Greeting"
@@ -35,8 +40,11 @@ def router(state):
             return "MissionComplete"
         case "CHITCHAT":
             return "Chitchat"
+        case "FAREWELL":
+            return "Farewell"
         case _:
             return "Fallback"
+
 
 graph.add_conditional_edges("UpdateMood", router)
 graph.add_edge("Greeting", END)
@@ -44,6 +52,7 @@ graph.add_edge("BadIntent", END)
 graph.add_edge("MissionAssign", END)
 graph.add_edge("MissionComplete", END)
 graph.add_edge("Chitchat", END)
+graph.add_edge("Farewell", END)
 graph.add_edge("Fallback", END)
 
 npc_graph = graph.compile()

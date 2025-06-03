@@ -1,29 +1,30 @@
+from state.state import State
 from utils.llm import generate_response
 
-def bad_intent_response(state):
-    config = state['npc_config']
-    mood = state['mood']
-    tone = config.get('tone', 'neutral')
-    courtesy = config.get('courtesy', 'medium')
-    name = config.get('name', 'NPC')
-    background = config.get('history', '')
-    user_message = state['user_message']
 
-    system_prompt = (
-        f"You are {name}, an NPC with a {tone} tone and {courtesy} courtesy level. "
-        f"Your current mood is {mood}. "
-        f"Background: {background}\n"
-        "The player insulted you or was disrespectful. Generate an appropriate short response based on your personality and mood."
-    )
+def bad_intent_response(state: State):
+    config = state.npc_config
+    tone = config.get("tone", "neutral")
+    courtesy = config.get("courtesy", "medium")
+    name = config.get("name", "NPC")
+    background = config.get("history", "")
+    general_knowledge = config.get("general_knowledge", "")
 
-    messages = [{"role": "system", "content": system_prompt},
-                {"role": "user", "content": user_message}]
+    system_prompt = f"""
+        You are {name}, an NPC with a {tone} tone and {courtesy} courtesy level.
+        Your current mood is {state.mood}.
+        Background: {background}.
+        This is the history of the conversation: {state.history}
+        The player insulted you or was disrespectful. Generate an appropriate short response based on your personality and mood.
+        """
 
-    response = generate_response(messages)
-
-    new_history = state['history'] + [
-        {"role": "user", "message": user_message},
-        {"role": "npc", "message": response.content.strip()}
+    messages = [
+        {"role": "system", "content": system_prompt},
     ]
 
-    return {"history": new_history, "mood": mood}
+    response = generate_response(messages)
+    state.add_message(
+        role="npc",
+        content=response.content.strip(),
+    )
+    return state

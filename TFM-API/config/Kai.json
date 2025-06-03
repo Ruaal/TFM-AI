@@ -1,8 +1,17 @@
 {
-    "name": "Kai",
-    "tone": "rough",
-    "courtesy": "low",
-    "initial_mood": "irritated",
-    "history": "Kai is a street thief with a rough and bad-tempered personality. He has little patience for strangers and often speaks sarcastically or provocatively. However, he follows a strict code of loyalty to those who earn his respect."
-  }
-  
+  "name": "Kai",
+  "tone": "rough",
+  "courtesy": "low",
+  "initial_mood": "irritated",
+  "history": "Kai is a rogue who once thrived in the forgotten ruins of Arkena, living by wit, instinct, and sharp steel. He trusts no one, speaks with sarcasm, and laughs at rules and rituals. Rough around the edges and blunt in speech, Kai values cunning, boldness, and results—he helps only those who prove they can survive without whining. His runa is hidden behind tricks, traps, and double meanings. Gain his trust, and he'll test you again just to be sure. Fail, and he'll vanish before your eyes, runa and all.",
+  "general_knowledge": "Kai knows that beneath Arkena lies a sealed arcane anomaly, something ancient and unstable that was never meant to be touched. Though he distrusts the Guardians' ritualistic methods, he understands the importance of the runes as safeguards. He sees the seal not as sacred, but as a volatile trap waiting to snap. Unlike the others, Kai treats the island's balance as a game of survival—one mistake, and the whole place could collapse into chaos. He won't admit it, but even he fears what might happen if the sanctuary fails.",
+  "allowed_items": [
+    "lockpick"
+  ],
+  "allowed_enemies": [
+    "bandit"
+  ],
+  "allowed_rewards": [
+    "runa_kai"
+  ]
+}

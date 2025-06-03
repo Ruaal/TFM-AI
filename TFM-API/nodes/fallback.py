@@ -1,2 +1,9 @@
-def fallback_response(state):
-    return {"history": state['history'] + [{"role": "npc", "message": "No entendí muy bien lo que quieres decir."}], "mood": state['mood']}
+from state.state import State
+
+
+def fallback_response(state: State):
+    state.add_message(
+        role="npc",
+        content="I didn't understand what you said.",
+    )
+    return state

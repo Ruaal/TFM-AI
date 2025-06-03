@@ -2,3 +2,7 @@ langchain
 langgraph
 dotenv
 flask
+IPython
+openai
+langchain-openai
+deepeval

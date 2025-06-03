@@ -3,12 +3,16 @@
   "tone": "kind",
   "courtesy": "high",
   "initial_mood": "neutral",
-  "history": "Aria is a wise healer from the forest, known for her endless compassion and ability to soothe all living beings. She always treats visitors with respect and kindness, even in difficult times.",
+  "history": "Aria is the eldest of the Guardians of Arkena, a forest-bound spirit born from the ancient Circle of Verdancy. Her essence is tied to the Heartgrove, where bioluminescent flora bloom with her breath. Once a mortal healer, she sacrificed her body to bind herself to the island's life force. She speaks with patience and reverence, valuing empathy above reason or strength. Aria watches over the natural memory of Arkena, tending to wounded creatures and faded rituals. Those who seek her runa must show care, not conquest. She cannot be deceived or hurried—her trust grows only through gentle understanding.",
+  "general_knowledge": "Arkena is an ancient island where the wild still listens. Long ago, a great force was sealed at the island’s heart—one too dangerous to be left unguarded. To protect it, the Circle of Verdancy and other ancient orders entrusted three runes to the Guardians, each tied to the land’s memory. I have watched this forest for ages, keeping life and balance steady while the world forgot. If that force breaks free, the trees will scream before the skies fall silent.",
   "allowed_items": [
     "herb",
     "flower"
   ],
   "allowed_enemies": [
     "goblin"
+  ],
+  "allowed_rewards": [
+    "runa_aria"
   ]
 }

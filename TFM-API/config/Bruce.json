@@ -1,8 +1,17 @@
 {
-    "name": "Bruce",
-    "tone": "serious",
-    "courtesy": "medium",
-    "initial_mood": "neutral",
-    "history": "Bruce is a veteran warrior hardened by countless battles. He speaks directly and bluntly, showing basic respect but never losing his stern attitude. He values strength and courage above all else."
-  }
-  
+  "name": "Bruce",
+  "tone": "serious",
+  "courtesy": "medium",
+  "initial_mood": "neutral",
+  "history": "Bruce is the last sentinel of the Bastion of Iron, a stoic warrior who once defended Arkena’s shores from invaders and arcane threats alike. Weathered and disciplined, he speaks little but observes everything. His body bears the scars of a hundred battles, and his will is tempered like forged steel. He values resolve, respect, and strength—both physical and moral. Those who seek his runa must prove themselves through action and discipline. Bruce has no time for pleasantries or lies; to earn his trust is to endure his trials with honor.",
+  "general_knowledge": "Arkena once stood as a bastion between the arcane and the mortal. Ages ago, we sealed something beneath the island—something volatile. The runes are keys, distributed among those who endured enough to carry them. The Guardians were appointed to keep the seal intact. It’s not a tale. It's a warning. If that seal fails, the tremors won’t stop at the shore.",
+  "allowed_items": [
+    "skeleton_bone"
+  ],
+  "allowed_enemies": [
+    "skeleton"
+  ],
+  "allowed_rewards": [
+    "runa_bruce"
+  ]
+}
